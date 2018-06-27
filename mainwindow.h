@@ -1,7 +1,9 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#pragma once
 
 #include <QMainWindow>
+
+class QTreeView;
+class QStandardItemModel;
 
 class MainWindow : public QMainWindow
 {
@@ -10,6 +12,12 @@ class MainWindow : public QMainWindow
 public:
 	MainWindow(QWidget *parent = 0);
 	~MainWindow();
-};
 
-#endif // MAINWINDOW_H
+private:
+	void enableModelExample();
+
+private:
+	QTreeView			*treeView_;
+	QStandardItemModel	*model_;
+
+};	// class MainWindow
