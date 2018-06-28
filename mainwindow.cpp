@@ -3,6 +3,7 @@
 #include <QStandardItemModel>
 
 #include "mainwindow.h"
+#include "griddelegate.h"
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 {
@@ -11,6 +12,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 
 	treeView_ = new QTreeView(this);
 	this->setCentralWidget(treeView_);
+
+	setMinimumHeight(700);
+	setMinimumWidth(400);
+
 	enableModelExample();
 }
 
@@ -34,4 +39,5 @@ void MainWindow::enableModelExample()
 		}
 	}
 	treeView_->setModel(model_);
+	treeView_->setItemDelegate(new GridDelegate(treeView_));
 }

@@ -13,6 +13,9 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp\
+        griddelegate.cpp
 
-HEADERS  += mainwindow.h
+
+HEADERS  += mainwindow.h\
+        griddelegate.h
