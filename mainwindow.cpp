@@ -53,4 +53,6 @@ void MainWindow::enableModelExample()
 	treeView_->setModel(model_);
 	treeView_->setItemDelegate(new GridDelegate(treeView_));
 	treeView_->setColumnWidth(0, this->width() / 3);
+	treeView_->setEditTriggers(QAbstractItemView::NoEditTriggers);
+	treeView_->setSelectionMode(QAbstractItemView::NoSelection);
 }
