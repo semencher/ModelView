@@ -24,6 +24,7 @@ MainWindow::~MainWindow() {}
 void MainWindow::enableModelExample()
 {
 	model_ = new QStandardItemModel(5, 3);
+	model_->setHorizontalHeaderLabels({"Property", "Value"});
 
 	for (int nTopRow = 0; nTopRow < 5; ++nTopRow) {
 		QModelIndex index = model_->index(nTopRow, 0);
